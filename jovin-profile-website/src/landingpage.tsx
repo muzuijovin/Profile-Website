@@ -1,7 +1,9 @@
+import { Navbar } from "./components/navbar"
+
 export function LandingPage() {
   return(
     <>
-    <h1>hai</h1>
+    <Navbar />
     </>
   )
 }
