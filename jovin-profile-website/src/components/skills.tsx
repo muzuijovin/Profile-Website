@@ -15,6 +15,11 @@ export function SkillsPage() {
     kolomtiga: string;
   }
 
+  interface TechCloud {
+    tittle: string;
+    box: string;
+  }
+
   const skillsLayout: SkillsLayout[] = [
     {
       tittle: "front end",
@@ -66,6 +71,61 @@ export function SkillsPage() {
     },
   ];
 
+  const techCloud: TechCloud[] = [
+    {
+      tittle: "tech1",
+      box: "React 18",
+    },
+    {
+      tittle: "tech2",
+      box: "Next.js 14",
+    },
+    {
+      tittle: "tech3",
+      box: "TypeScript",
+    },
+    {
+      tittle: "tech4",
+      box: "Node.js",
+    },
+    {
+      tittle: "tech5",
+      box: "Express.js",
+    },
+    {
+      tittle: "tech6",
+      box: "PostgreSQL",
+    },
+    {
+      tittle: "tech7",
+      box: "Tailwind CSS",
+    },
+    {
+      tittle: "tech8",
+      box: "Docker",
+    },
+    {
+      tittle: "tech9",
+      box: "Amazon Web Services",
+    },
+    {
+      tittle: "tech10",
+      box: "REST APIs",
+    },
+    {
+      tittle: "tech11",
+      box: "Git Versioning",
+    },
+    {
+      tittle: "tech12",
+      box: "CI/CD Pipelines",
+    },
+    {
+      tittle: "tech13",
+      box: "Postman Testing",
+    },
+  ];
+
   return (
     <>
       <div id="skillsSection" className="bg-primary-975 h-max p-12">
@@ -85,7 +145,7 @@ export function SkillsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 p-6 gap-10">
+        <div className="grid grid-cols-1 p-6 gap-10 md:grid-cols-3">
           {skillsLayout.map((item) => {
             return (
               <div className="bg-primary-950 h-max p-8 rounded-md">
@@ -149,11 +209,19 @@ export function SkillsPage() {
         </div>
 
         <div className="bg-[#041329] mt-10 p-8 rounded-md">
-          <h1 className="font-label font-semibold text-xs text-[#4FDBC8]">LUMINOUS TECH CLOUD</h1>
-          <div className="grid grid-cols-11 gap-3">
-            <h1 className="">
-              1
-            </h1>
+          <h1 className="font-label font-semibold text-xs text-[#4FDBC8] mb-3">
+            LUMINOUS TECH CLOUD
+          </h1>
+          <div className="grid grid-cols-6 gap-3 md:grid-cols-11">
+            {techCloud.map((item) => {
+              return (
+                <div className="p-2 bg-primary-950 flex items-center justify-center rounded-md">
+                  <h1 className="font-label text-[9px] font-semibold text-[#D6E3FF]">
+                    {item?.box}
+                  </h1>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
