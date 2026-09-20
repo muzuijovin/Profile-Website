@@ -39,11 +39,60 @@ export function Navbar() {
 
   return (
     <>
-      <div className="navbar flex justify-between bg-primary-975 pr-5 pl-5">
+      <div className="navbar flex justify-between bg-[#041329] pr-5 pl-5">
         <div className=" flex items-center gap-5 ">
-          <span>
-            <img src="" alt="logo" />
-          </span>
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn bg-primary-900 hover:opacity-65 md:hidden lg:hidden">
+              <svg
+                aria-label="Menu"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-neutral-100"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex={-1}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>about</a>
+              </li>
+              <li>
+                <a>skills</a>
+              </li>
+              <li>
+                <a>portofolio</a>
+              </li>
+              <li>
+                <a>experience</a>
+              </li>
+              <li>
+                <a>testimonials</a>
+              </li>
+              <li>
+                <a>contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="h9 w-9 rounded-2xl overflow-hidden cursor-pointer">
+            <img
+              src="/logo-jn-satu.jpg"
+              alt="logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           <div className="">
             <h1 className="font-headline text-xl text-neutral-100">
               Jovin Najwan
@@ -53,15 +102,19 @@ export function Navbar() {
             </h2>
           </div>
         </div>
-        <div className="flex gap-2">
+
+        <div className="hidden md:flex md:gap-2">
           {buttonNavbar.map((menu) => {
             return (
-              <button className="btn btn-info font-label">{menu?.label}</button>
+              <button className="btn btn-info rounded-md font-label">
+                {menu?.label}
+              </button>
             );
           })}
         </div>
+
         <div className="flex items-center gap-4 pl-2 pr-2">
-          <div className="bg-primary-900 rounded-lg w-7 h-7 flex justify-center items-center cursor-pointer">
+          <div className="bg-primary-900 hover:opacity-65 rounded-lg w-7 h-7 flex justify-center items-center cursor-pointer">
             <span>
               <img src="/Share-Icon.svg" alt="share" />
             </span>
@@ -69,10 +122,12 @@ export function Navbar() {
 
           <button className="btn btn-info font-label">Hire Me</button>
 
-          <div className="rounded-lg w-8 h-8 cursor-pointer">
-            <span className="block w-full h-full">
-              <img src="/Profile.svg" alt="profile-photo" />
-            </span>
+          <div className="w-9 h-9 cursor-pointer rounded-xl overflow-hidden">
+            <img
+              src="/foto-jovin-najwan.jpg"
+              alt="profile-photo"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
