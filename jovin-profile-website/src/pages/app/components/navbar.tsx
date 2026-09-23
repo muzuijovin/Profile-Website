@@ -8,17 +8,17 @@ export function Navbar() {
     {
       label: "about",
       tittle: "About",
-      url: "/landing-page",
+      url: "#aboutSection",
     },
     {
       label: "skills",
       tittle: "Skills",
-      url: "/landing-page",
+      url: "#skillsSection",
     },
     {
       label: "portofolio",
       tittle: "Portofolio",
-      url: "/landing-page",
+      url: "#portofolioSection",
     },
     {
       label: "experience",
@@ -42,7 +42,11 @@ export function Navbar() {
       <div className="navbar flex justify-between bg-[#041329] pr-5 pl-5">
         <div className=" flex items-center gap-5 ">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn bg-primary-900 hover:opacity-65 md:hidden lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn bg-primary-900 hover:opacity-65 md:hidden lg:hidden"
+            >
               <svg
                 aria-label="Menu"
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,13 +69,13 @@ export function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>about</a>
+                <a href="#aboutSection">about</a>
               </li>
               <li>
-                <a>skills</a>
+                <a href="#skillsSection">skills</a>
               </li>
               <li>
-                <a>portofolio</a>
+                <a href="#portofolioSection">portofolio</a>
               </li>
               <li>
                 <a>experience</a>
@@ -102,13 +106,14 @@ export function Navbar() {
             </h2>
           </div>
         </div>
-
         <div className="hidden md:flex md:gap-2">
           {buttonNavbar.map((menu) => {
             return (
-              <button className="btn btn-info rounded-md font-label">
-                {menu?.label}
-              </button>
+              <a href={menu?.url}>
+                <button className="btn btn-info rounded-md font-label">
+                  {menu?.label}
+                </button>
+              </a>
             );
           })}
         </div>

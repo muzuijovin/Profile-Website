@@ -1,4 +1,4 @@
-export function AboutPage() {
+export function AboutSection() {
   interface AboutPoint {
     tittle: string;
     isi: string;
@@ -33,7 +33,7 @@ export function AboutPage() {
           Architecting systems with <br /> precision, purpose & clarity.
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] lg:mt-15 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] lg:mt-12 lg:gap-4">
           <div
             id="leftAboutSection"
             className="bg-primary-950 h-max p-10 rounded-md p-"

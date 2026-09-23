@@ -1,4 +1,4 @@
-export function SkillsPage() {
+export function SkillsSection() {
   interface SkillsLayout {
     tittle: string;
     img: string;
@@ -145,7 +145,7 @@ export function SkillsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 p-6 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 p-6 gap-10 md:grid-cols-3 mt-12">
           {skillsLayout.map((item) => {
             return (
               <div className="bg-primary-950 h-max p-8 rounded-md">
@@ -215,7 +215,7 @@ export function SkillsPage() {
           <div className="grid grid-cols-6 gap-3 md:grid-cols-11">
             {techCloud.map((item) => {
               return (
-                <div className="p-2 bg-primary-950 flex items-center justify-center rounded-md">
+                <div className="p-2 bg-primary-950 hover:opacity-65 flex items-center justify-center rounded-md">
                   <h1 className="font-label text-[9px] font-semibold text-[#D6E3FF]">
                     {item?.box}
                   </h1>

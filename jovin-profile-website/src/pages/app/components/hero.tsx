@@ -76,11 +76,11 @@ export function HeroSection() {
           <div id="rightSideHero" className="p-20 md:pl-30 md:pr-20 md:pt-0">
             <div
               id="fullLayOut"
-              className="rounded-2xl overflow-hidden border border-white/5 shadow-[0_0_50px_-12px_rgba(79,219,200,0.15)]"
+              className="group rounded-2xl overflow-hidden border border-white/5 shadow-[0_0_50px_-12px_rgba(79,219,200,0.15)]"
             >
               <div
                 id="layoutPhoto"
-                className="h-120 md:h-70 md:bg-blend-saturation md:relative"
+                className="h-120 md:h-70 md:bg-blend-saturation md:relative overflow-hidden"
               >
                 <div className="flex gap-1 h-max w-max absolute top-2 right-2 bg-[#010E24] rounded-xl p-1 cursor-pointer">
                   <GoDotFill className="text-[#ACEDFF]" />
@@ -91,7 +91,7 @@ export function HeroSection() {
                 <img
                   src="/foto-jovin-najwan.jpg"
                   alt="foto jovin"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-115"
                 />
               </div>
 
