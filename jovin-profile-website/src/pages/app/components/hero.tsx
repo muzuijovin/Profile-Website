@@ -80,7 +80,7 @@ export function HeroSection() {
             >
               <div
                 id="layoutPhoto"
-                className="h-120 md:h-70 md:bg-blend-saturation md:relative overflow-hidden"
+                className="h-120 md:h-90 md:bg-blend-saturation md:relative overflow-hidden"
               >
                 <div className="flex gap-1 h-max w-max absolute top-2 right-2 bg-[#010E24] rounded-xl p-1 cursor-pointer">
                   <GoDotFill className="text-[#ACEDFF]" />

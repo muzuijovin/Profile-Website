@@ -4,6 +4,7 @@ import { HeroSection } from "./components/hero";
 import { Navbar } from "./components/navbar";
 import { PortofolioSection } from "./components/portofolio";
 import { SkillsSection } from "./components/skills";
+import { TestimonialsSection } from "./components/testimonials";
 
 export function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export function LandingPage() {
       <SkillsSection />
       <PortofolioSection />
       <ExperienceSection />
+      <TestimonialsSection />
     </>
   );
 }

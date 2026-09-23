@@ -33,7 +33,7 @@ export function AboutSection() {
           Architecting systems with <br /> precision, purpose & clarity.
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] lg:mt-12 lg:gap-4">
+        <div className="grid grid-cols-1 mt-12 lg:grid-cols-[55%_45%]  lg:gap-4">
           <div
             id="leftAboutSection"
             className="bg-primary-950 h-max p-10 rounded-md p-"

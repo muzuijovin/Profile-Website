@@ -1,7 +1,7 @@
 export function ExperienceSection() {
   return (
     <>
-      <div className="h-screen bg-primary-975 p-12">
+      <div id="experienceSection" className="h-max bg-primary-975 p-12">
         <div className="mb-16">
           <h3 className="font-label text-[#4FDBC8] text-xs">
             04 / TRAJECTORY ----
